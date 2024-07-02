@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "b7c0706c-6e6a-444f-ba7f-83bfef4fc5d1",
+		"name": "Ifoa_SWE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2929196"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5184/WeatherForecast",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"WeatherForecast_RunOK\", function () {\r",
+							"    // make as many assertions as you'd like as part of this test\r",
+							"    // if any assertion throws an error, this test will fail\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.ok;\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5184/WeatherForecast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5184",
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
